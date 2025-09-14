@@ -1,69 +1,77 @@
-# React + TypeScript + Vite
+# MyByte Test 2
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Teste 2 do MyByte que se refere a cálculos financeiros.
 
-Currently, two official plugins are available:
+## 📦 Instalação
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+# Clone o repositório
+git clone <url-do-repositorio>
 
-## Expanding the ESLint configuration
+# Entre no diretório
+cd mybyte-test-2
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Instale as dependências
+pnpm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🚀 Como usar
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Executar em modo de desenvolvimento
+pnpm dev
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Build para produção
+pnpm build
+
+# Preview da build
+pnpm preview
+
+# Executar testes
+Individual:
+pnpm simple-interest-test
+pnpm compound-interest-test
+
+Juntamente:
+pnpm test
 ```
+
+## 📊 Fórmulas
+
+### Juros Simples
+```
+J = C × i × t
+M = C + J
+```
+
+### Juros Compostos
+```
+M = C × (1 + i)^t
+J = M - C
+```
+
+### Valor Presente
+```
+P = F / (1 + i)^t
+```
+
+Onde:
+- **C** = Capital inicial
+- **i** = Taxa de juros
+- **t** = Tempo
+- **J** = Juros
+- **M** = Montante
+- **P** = Valor Presente
+- **F** = Valor Futuro
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/          # Componentes React
+├── helpers/            # Funções utilitárias
+└── tests/             # Arquivos de teste
+```
+
+## ❗Observações:
+- Foram adicionados dois botões, um para exibir os resultados de juros simples e outro para exibir os resultados dos juros compostos.
