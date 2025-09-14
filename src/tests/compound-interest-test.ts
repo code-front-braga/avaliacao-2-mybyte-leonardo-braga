@@ -15,20 +15,20 @@ export const compoundInterestTest = () => {
   const futureValue2 = 10600;
 
   const time3 = 8;
-  const rate3 = 2;
+  const rate3 = 0.03;
   const capital3 = 350;
   const futureValue3 = 360;
 
   const amount1 = compoundInterestAmountFunction({ capital: capital1, rate: rate1, time: time1 });
-  const compoundInterestResult1 = compoundInterestFunction({ amount: futureValue1, capital: capital1 });
+  const compoundInterestResult1 = compoundInterestFunction({ amount: amount1, capital: capital1 });
   const presentValue1 = presentValueFunction({ futureValue: futureValue1, time: time1, rate: rate1 });
 
   const amount2 = compoundInterestAmountFunction({ capital: capital2, rate: rate2, time: time2 });
-  const compoundInterestResult2 = compoundInterestFunction({ amount: futureValue2, capital: capital2 });
+  const compoundInterestResult2 = compoundInterestFunction({ amount: amount2, capital: capital2 });
   const presentValue2 = presentValueFunction({ futureValue: futureValue2, time: time2, rate: rate2 });
 
   const amount3 = compoundInterestAmountFunction({ capital: capital3, rate: rate3, time: time3 });
-  const compoundInterestResult3 = compoundInterestFunction({ amount: futureValue3, capital: capital3 });
+  const compoundInterestResult3 = compoundInterestFunction({ amount: amount3, capital: capital3 });
   const presentValue3 = presentValueFunction({ futureValue: futureValue3, time: time3, rate: rate3 });
 
   console.log('Montante 1', convertToBrl(amount1));
