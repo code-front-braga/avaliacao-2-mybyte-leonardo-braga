@@ -5,7 +5,8 @@ interface SimpleInterestFunctionProps {
 }
 
 export const simpleInterestFunction = ({ capital, rate, time }: SimpleInterestFunctionProps) => {
-  const simpleInterest = (capital * rate * time);
+  // Aqui, estou calculando o juros simples, multiplicando o capital, a taxa de juros e o tempo
+  const simpleInterest = capital * rate * time;
 
   return simpleInterest;
 }

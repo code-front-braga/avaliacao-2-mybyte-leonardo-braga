@@ -4,6 +4,7 @@ interface simpleInterestAmountFunctionProps {
 }
 
 export const simpleInterestAmountFunction = ({ capital, simpleInterest }: simpleInterestAmountFunctionProps) => {
+  // Aqui, estou calculando o montante
   const amount = capital + simpleInterest;
 
   return amount;
