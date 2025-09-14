@@ -1,6 +1,7 @@
 import { useState } from "react"
 import CustomButton from "./custom-button";
 import SimpleInterest from "./simple-interest";
+import CompoundInterest from "./compound-interest";
 
 type InterestType = 'simple' | 'compound';
 
@@ -23,7 +24,7 @@ const UIResult = () => {
       <h1 className="text-3xl font-bold">Resultado</h1>
 
       {simpleType && <SimpleInterest />}
-      {/* {compoundType && <CompoundInterest />} */}
+      {compoundType && <CompoundInterest />}
     </section>
    );
 }
