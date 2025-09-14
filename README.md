@@ -75,3 +75,4 @@ src/
 
 ## ❗Observações:
 - Foram adicionados dois botões, um para exibir os resultados de juros simples e outro para exibir os resultados dos juros compostos.
+- Foi necessário instalar o tsx para executar os testes.
